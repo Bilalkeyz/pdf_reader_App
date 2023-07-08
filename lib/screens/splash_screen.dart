@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pdf_reader/controller/splash_screen_controller.dart';
+import 'package:pdf_reader/screens/pdf_list_screen.dart';
 import 'package:pdf_reader/utils/app_colors.dart';
 import 'package:pdf_reader/widgets/roundbutton.dart';
 
@@ -22,7 +23,9 @@ class SplashScreen extends GetView<SplashScreenController> {
             Center(
                 child: Image(
                     image: AssetImage('assets/images/splashscreenlogo.png'))),
-            RoundButton(title: 'Get Started', onTap: () {})
+            RoundButton(title: 'Get Started', onTap: () {
+              Get.to(PdfListScreen());
+            })
           ],
         ),
       ),

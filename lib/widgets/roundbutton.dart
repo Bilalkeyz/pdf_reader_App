@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../screens/pdf_list_screen.dart';
 
 class RoundButton extends StatelessWidget {
   final bool loading;
@@ -35,7 +38,9 @@ class RoundButton extends StatelessWidget {
             height: 10,
           ),
           GestureDetector(
-            onTap: (){},
+            onTap: (){
+              Get.to(PdfListScreen());
+            },
               child: Icon(
             Icons.arrow_forward,
             color: Colors.black,
